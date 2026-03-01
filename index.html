@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Vaezi — Personal Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #0d0f12;
+            --surface: #161a20;
+            --border: #2a2f3a;
+            --accent: #00ffcc;
+            --accent2: #ff3cac;
+            --text: #e8eaf0;
+            --muted: #6b7280;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* ── Hero ── */
+        header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px 56px;
+        }
+
+        .chip {
+            display: inline-block;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 6px 12px;
+            margin-bottom: 32px;
+            box-shadow: 4px 4px 0 var(--accent);
+            letter-spacing: 0.04em;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(18px, 3.5vw, 32px);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+            max-width: 440px;
+        }
+
+        /* ── Projects ── */
+        .projects {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px 100px;
+        }
+
+        .section-label {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            color: var(--accent2);
+            letter-spacing: 0.1em;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: var(--border);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            padding: 28px 24px 24px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            transition: border-color 0.12s, box-shadow 0.12s, transform 0.1s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 6px 6px 0 var(--accent);
+            transform: translate(-2px, -2px);
+        }
+
+
+        .project-icon {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 18px;
+            image-rendering: pixelated;
+        }
+
+        .project-name {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .project-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 36px;
+        }
+
+        .tag {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 6px;
+            padding: 4px 8px;
+            background: rgba(0, 255, 204, 0.08);
+            color: var(--accent);
+            border: 1px solid rgba(0, 255, 204, 0.25);
+        }
+
+        .arrow {
+            position: absolute;
+            bottom: 22px;
+            right: 22px;
+            font-size: 18px;
+            color: var(--muted);
+            transition: color 0.12s, transform 0.12s;
+        }
+
+        .project-card:hover .arrow {
+            color: var(--accent);
+            transform: translate(3px, -3px);
+        }
+
+        /* ── Footer ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 7px;
+            color: var(--muted);
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="chip">THOMAS VAEZI</div>
+    <h1>hey, i'm<br><em>Thomas.</em></h1>
+    <p class="subtitle">Building things — games, code, ideas. This is where they live.</p>
+</header>
+
+<section class="projects">
+    <div class="section-label">PROJECTS</div>
+    <div class="project-grid">
+
+
+    </div>
+</section>
+
+<footer>
+    <p>© THOMAS VAEZI</p>
+</footer>
+
+</body>
+</html>
